@@ -32,10 +32,10 @@ def app(extra_config: Optional[dict[str, Any]] = None) -> Flask:
     to the application before initializing.
     """
     flask_app = Flask(__name__, instance_relative_config=True)
-    flask_app.config.from_object("myproject.config")
+    flask_app.config.from_object("{{ cookiecutter.project_slug }}.config")
     if extra_config:
         flask_app.config.from_mapping(extra_config)
 
     # Configure services and extensions
-    discover_flask("myproject", flask_app)
+    discover_flask("{{ cookiecutter.project_slug }}", flask_app)
     return flask_app

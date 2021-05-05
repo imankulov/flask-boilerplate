@@ -1,7 +1,7 @@
 import pytest
 
-from myproject.app import app
-from myproject.services import db
+from {{ cookiecutter.project_slug }}.app import app
+from {{ cookiecutter.project_slug }}.services import db
 
 
 @pytest.fixture(autouse=True, scope="session")

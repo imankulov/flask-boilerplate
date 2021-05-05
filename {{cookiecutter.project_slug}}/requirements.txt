@@ -1,0 +1,8 @@
+# Sample requirements project.
+# Consider using Poetry, pipenv, or pip-tools instead.
+flask
+flask-sqlalchemy
+flask-migrate
+python-dotenv
+roman-discovery
+pytest
