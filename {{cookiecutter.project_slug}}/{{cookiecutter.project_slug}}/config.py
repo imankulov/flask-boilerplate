@@ -15,7 +15,9 @@ The module doesn't import anything from the project.
 Who can import config.py?
 ---------------------------
 
-The module is imported by the app.py but nowhere else!
+The module is imported by the app.py to create services. It can also be imported in
+the other parts of the application: for example, to get access to PROJECT_ROOT, or to
+create project-specific services from requisites, provided in the config.
 """
 import os
 import pathlib
